@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock title %}
+{% block content %}
+
+    <p id="para"> Please enter the fields below to check whether you are diabetic or non-daibetic</p>
+
+<div class="center">
+    <p>All feilds are required:-</p>
+
+    <form action="/predict", method = "post" autocomplete="off" required>
+        <p><input type="text" name="radius_mean" placeholder="Mean radius of the cell" required ></p>
+        <p><input type="text" name="texture_mean" placeholder="Mean texture of the cell" ></p>
+        <p><input type="text" name="perimeter_mean" placeholder="Mean perimeter of the cell" required></p>
+        <p><input type="text" name="area_mean" placeholder="Mean aera of the cell" required></p>
+        <p><input type="text" name="smoothness_mean" placeholder="Mean smoothness of the cell" required ></p>
+        <p><input type="text" name="compactness_mean" placeholder=" Mean compactness of the cell " required ></p>
+        <p><input type="text" name="concavity_mean" placeholder="Mean concavity of the cell" required ></p>
+        <p><input type="text" name="concave points_mean" placeholder="Mean of the concave points of the cell" required></p>
+        <p><input type="text" name="symmetry_mean" placeholder="Mean of the symmetry of the cell" required></p>
+        <p><input type="text" name="fractal_dimension_mean" placeholder="Mean of the fractal dimesnions of the cell" required></p>
+        <p><input type="text" name="radius_se" placeholder="radius_se" required></p>
+        <p><input type="text" name="texture_se " placeholder="texture_se" required></p>
+        <p><input type="text" name="perimeter_se" placeholder="perimeter_se" required></p>
+        <p><input type="text" name="area_se" placeholder="area_se" required></p>
+        <p><input type="text" name="smoothness_se" placeholder="smoothness_se" required></p>
+        <p><input type="text" name="compactness_se" placeholder="compactness_se" required></p>
+        <p><input type="text" name="concavity_se " placeholder="concavity_se " required></p>
+        <p><input type="text" name="concave points_se" placeholder="concave points_se" required></p>
+        <p><input type="text" name="symmetry_se" placeholder="symmetry_se" required></p>
+        <p><input type="text" name="fractal_dimension_se" placeholder="fractal_dimension_se" required></p>
+        <p><input type="text" name="radius_worst" placeholder="Worst radius of the cell" required ></p>
+        <p><input type="text" name="texture_worst" placeholder="Worst texure of the cell" required ></p>
+        <p><input type="text" name="perimeter_worst" placeholder="Worst perimeter of the cell" required ></p>
+        <p><input type="text" name="area_worst" placeholder="Worst Aera of the cell" required ></p>
+        <p><input type="text" name="smoothness_worst" placeholder="worst smoothness of the cell" required ></p>
+        <p><input type="text" name="compactness_worst" placeholder="worst compactness of the cell" required ></p>
+        <p><input type="text" name="concavity_worst" placeholder="woest concavity of the cell" required ></p>
+        <p><input type="text" name="concave points_worst" placeholder="worst concave points of the cell" required ></p>
+        <p><input type="text" name="symmetry_worst" placeholder="worst symmetry of the cell" required ></p>
+        <p><input type="text" name="fractal_dimension_worst" placeholder="Worst fractal dimensions of the cells" required ></p>
+
+        <p id = "submit"> <input type= "submit" value= PREDICT > </p>
+
+    <br><br>
+
+    <h3>{{pred}}</h3>
+    </form>
+</div>
+{% endblock content %}

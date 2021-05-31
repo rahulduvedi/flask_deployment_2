@@ -1,0 +1,41 @@
+.center {
+    margin: auto;
+    margin-top: 2rem;
+    width: 50%;
+    border: 2px solid #C0C0C0;
+    border-radius: 20px;
+    padding: 1rem;
+    padding-top: 2rem;
+    padding-left:10rem ;
+    padding-right: 10rem;;
+    padding-bottom: 2rem;
+    background-color:#fae6fa;
+
+}
+#submit{
+    margin: auto;
+    width: 100px;
+}
+input{
+    width: 100%;
+}
+body{
+    background:#fffdd0;
+}
+footer{
+    margin-top: 2rem;
+    background-color:grey;
+}
+p{
+    text-align: centers;
+}
+#para{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+input[type=text]{
+    border-radius: 5px;
+    border-color:#C0C0C0 ;
+}
